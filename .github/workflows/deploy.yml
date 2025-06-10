@@ -31,5 +31,5 @@ jobs:
             - name: Build Project
               run: npm run build
             - name: Deploy to GitHub Pages
-              run : echo "Deploying to GitHub Pages..."
+              run : echo "${{ toJSON(github) }}"
     

@@ -39,3 +39,12 @@ jobs:
             - name: Deploy to GitHub Pages
               run : echo "${{ toJSON(github) }}"
 
+            - name: upload
+              uses: actions/upload-artifact@v3
+              with:
+                  name: dist
+                  path: |
+                      dist
+                      index.html
+                      package.json
+
